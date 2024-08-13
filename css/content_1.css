@@ -1,0 +1,143 @@
+.content_1 {
+  position: relative;
+}
+
+.content_1_wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 1380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+video {
+  max-width: 1380px;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainpage_wrapper {
+  position: absolute;
+  z-index: 1;
+  height: 80%;
+  width: 95%;
+}
+
+.home_header_wrapper {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.header {
+  height: 70%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
+  font-family: poppins;
+}
+
+.date_header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.date_released {
+  height: 100%;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #58c9d4;
+  color: white;
+}
+
+.date_released h5 {
+  font-weight: 500;
+}
+
+.date_header h1:last-child {
+  color: white;
+  width: 30%;
+}
+
+.title_header {
+  display: flex;
+  align-items: center;
+}
+
+.title_header h1 {
+  color: white;
+  font-size: clamp(2rem, 10vw, 3.8rem);
+  line-height: 60px;
+}
+
+.title_header span {
+  color: rgb(255, 0, 0);
+}
+
+.header_desc {
+  display: flex;
+  align-items: center;
+}
+
+.header_desc h4 {
+  font-weight: 500;
+  color: white;
+  text-align: justify;
+  width: 80%;
+}
+
+.header_btn {
+  display: flex;
+  align-items: center;
+}
+
+.header_btn button {
+  height: 40px;
+  width: 150px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background-color: #58c9d4;
+  font-family: poppins;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1345px) {
+  .header {
+    width: 100%;
+  }
+
+  .header_desc h4 {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .header {
+    height: 80%;
+    width: 100%;
+  }
+
+  .header_desc h4 {
+    width: 100%;
+  }
+
+  .home_header_wrapper {
+    height: 100%;
+    width: 70%;
+  }
+  .content_1 {
+    height: 770px;
+  }
+}

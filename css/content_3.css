@@ -1,0 +1,139 @@
+.content_3_wrapper {
+  height: 100%;
+  width: 100%;
+  max-width: 1380px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  font-family: poppins;
+  margin-top: 100px;
+}
+
+.discography_wrapper {
+  height: 55%;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+}
+
+.discography_header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.discography_header h2 {
+  color: #58c9d4;
+  letter-spacing: 3px;
+}
+
+.discography_header h1 {
+  font-size: 3rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(245, 103, 126),
+    rgb(170, 2, 170),
+    #58c9d4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.musics_wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-auto-rows: 1fr;
+}
+
+.album_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.music {
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.title_wrapper {
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.title_wrapper h5 {
+  font-weight: 500;
+}
+
+.music::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%; /* Adjust height as needed */
+  background-image: linear-gradient(0deg, #000000 30%, #00000000 50%);
+  z-index: 0; /* Send it behind the content */
+  border-radius: 15px; /* Match the card's border-radius */
+  opacity: 0.5; /* Start fully visible */
+  transition: opacity 1s ease; /* Smooth transition for opacity */
+}
+
+@media screen and (min-width: 768px) and (max-width: 899px) {
+  .album_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .musics_wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+  }
+
+  iframe {
+    margin: 0px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content_3_wrapper {
+    margin-bottom: 150px;
+  }
+  .musics_wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr;
+  }
+  .album_wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .discography_wrapper {
+    grid-template-rows: 0.2fr 1fr;
+  }
+
+  iframe {
+    height: 380px;
+  }
+}
